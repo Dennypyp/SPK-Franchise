@@ -41,7 +41,7 @@
                                             <td class="text-center">
                                                 <form action="{{route('alternatif.hapus',['id' => $data->id])}}" method="POST">
                                                     @csrf
-                                                    <a href="{{route('nilai')."?a=".$data->id}}" class="btn btn-sm btn-info">Crip</a>
+                                                    <a href="{{route('nilai')."?a=".$data->id}}" class="btn btn-sm btn-info">Nilai</a>
                                                     <a href="{{route('alternatif.edit',['id' => $data->id])}}" class="btn btn-sm btn-warning">Edit</a>
                                                     <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                                                 </form>

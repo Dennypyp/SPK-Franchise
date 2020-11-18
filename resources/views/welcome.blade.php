@@ -80,10 +80,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    SPK-SAW
+                    Cari Franchisemu
                 </div>
                 <div class="links">
-                    Sistem Pengambilan Keputusan Berbasis Web dengan Metode SAW
+                    Sistem Pendukung Keputusan untuk Pemilihan Usaha Franchise dengan Metode Simple Additive Weighting (SAW)
                 </div>
                 <div class="links">
                     Made with <span style="color: red;">&hearts;</span> By<a style="color: darkred;" href="https://gitlab.com/tukangsare/">Denny Reza Marcell</a>

@@ -41,6 +41,7 @@
                     @guest
                     @else
                         <ul class="navbar-nav mr-auto">
+                            @if(Auth()->user()->role == "admin")
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Kriteria
@@ -48,9 +49,11 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{route('kriteria')}}">Kriteria</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{route('crip')}}">Nilai Crips</a>
+                                    <a class="dropdown-item" href="{{route('crip')}}">Nilai Kriteria</a>
                                 </div>
                             </li>
+                            @endif
+                            @if(Auth()->user()->role == "customer")
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Alternatif
@@ -62,6 +65,7 @@
                                 </div>
                             </li>
                             <li><a class="nav-link" href="{{route('perhitungan')}}">Perhitungan</a></li>
+                            @endif
                         </ul>
                     @endguest
 

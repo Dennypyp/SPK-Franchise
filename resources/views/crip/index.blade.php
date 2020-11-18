@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="float-left">Nilai Crips</h2>
+                        <h2 class="float-left">Nilai Kriteria</h2>
                         <form action="{{route('crip')}}" class="form-inline float-right" method="GET">
                         <div class="form-group">
                             <select name="k" onchange="this.form.submit()" class="form-control">
