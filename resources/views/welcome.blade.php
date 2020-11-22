@@ -86,7 +86,7 @@
                     Sistem Pendukung Keputusan untuk Pemilihan Usaha Franchise dengan Metode Simple Additive Weighting (SAW)
                 </div>
                 <div class="links">
-                    Made with <span style="color: red;">&hearts;</span> By<a style="color: darkred;" href="https://gitlab.com/tukangsare/">Denny Reza Marcell</a>
+                    Made  By<a style="color: purple;" href="https://gitlab.com/tukangsare/">Denny Reza Marcell</a>
                 </div>
             </div>
         </div>
