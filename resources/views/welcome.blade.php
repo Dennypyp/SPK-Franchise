@@ -5,7 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>SPK Franchise</title>
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="{{asset('assets/img/icon.png')}}" type="image/x-icon">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -50,10 +52,15 @@
                 font-size: 84px;
             }
 
+            .links{
+                font-size: 20px;
+                font-weight: 500;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 16px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -62,6 +69,21 @@
 
             .m-b-md {
                 margin-bottom: 30px;
+            }
+
+            .brand {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,.05);
+            position: relative;
+            z-index: 1;
+            }
+
+            .brand img {
+                width: 100%;
             }
         </style>
     </head>
@@ -79,6 +101,9 @@
             @endif
 
             <div class="content">
+                <div class="brand">
+                    <img src="{{asset('assets/img/icon.png')}}" alt="logo">
+                </div>
                 <div class="title m-b-md">
                     Cari Franchisemu
                 </div>

@@ -17,6 +17,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
+                                    <th class="text-center">No</th>
                                     <th class="text-center">Kode</th>
                                     <th class="text-center">Nama</th>
                                     @foreach($kriteria as $krit)
@@ -29,6 +30,7 @@
                                 @if(!empty($alternatif))
                                     @foreach($alternatif as $data)
                                         <tr>
+                                            <td>{{$loop->iteration}}</td>
                                             <td>{{$data->kode_alternatif}}</td>
                                             <td>{{$data->nama_alternatif}}</td>
                                             @foreach($data->crip as $crip)

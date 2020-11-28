@@ -25,16 +25,18 @@
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
+                                    <th class="text-center">No</th>
                                     <th class="text-center">Kode</th>
                                     <th class="text-center">Nama</th>
                                     <th class="text-center">Keterangan</th>
-                                    <th class="text-center" style="width:20%">Aksi</th>
+                                    <th class="text-center" style="width:30%">Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @if(!empty($alternatif))
                                     @foreach($alternatif as $data)
                                         <tr>
+                                            <td>{{$loop->iteration}}</td>
                                             <td>{{$data->kode_alternatif}}</td>
                                             <td>{{$data->nama_alternatif}}</td>
                                             <td>{{$data->keterangan}}</td>

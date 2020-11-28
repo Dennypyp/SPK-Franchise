@@ -14,6 +14,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
+                                    <th class="text-center">Kode</th>
                                     <th class="text-center">Nama</th>
                                     @foreach($kriteria as $krit)
                                         <th class="text-center">{{$krit->nama}}</th>
@@ -24,6 +25,7 @@
                                 @if(!empty($alternatif))
                                     @foreach($alternatif as $data)
                                         <tr>
+                                            <td>{{$data->kode_alternatif}}</td>
                                             <td>{{$data->nama_alternatif}}</td>
                                             @foreach($data->crip as $crip)
                                                 <td>{{$crip->nama_crip}}</td>
@@ -104,7 +106,7 @@
                                                     <?php $normalisasi = ($crip->nilai_crip/$kode_krit[$crip->kriteria->id]); ?>
                                                 @endif
                                                     <?php $total = $total+($bobot[$crip->kriteria->id]*$normalisasi);?>
-                                                    <td>{{$normalisasi}}</td>
+                                                    <td>{{number_format($normalisasi,2,",",".")}}</td>
                                             @endforeach
                                             <?php $rangking[] = [
                                                 'kode'  => $data->kode_alternatif,
@@ -154,7 +156,7 @@
                                         <tr>
                                             <td>{{$t['kode']}}</td>
                                             <td>{{$t['nama']}}</td>
-                                            <td>{{$t['total']}}</td>
+                                            <td>{{number_format($t['total'],2,",",".")}}</td>
                                             <td>{{$a++}}</td>
                                         </tr>
                                     @endforeach

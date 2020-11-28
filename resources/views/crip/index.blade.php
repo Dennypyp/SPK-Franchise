@@ -27,10 +27,11 @@
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Kriteria</th>
                                     <th>Keterangan</th>
                                     <th>Nilai</th>
-                                    <th class="text-center" style="width:15%">Aksi</th>
+                                    <th class="text-center" style="width:20%">Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -41,6 +42,7 @@
                                 @else
                                     @foreach($crips as $data)
                                         <tr>
+                                            <td>{{$loop->iteration}}</td>
                                             <td>{{$data->kriteria->nama}}</td>
                                             <td>{{$data->nama_crip}}</td>
                                             <td>{{$data->nilai_crip}}</td>

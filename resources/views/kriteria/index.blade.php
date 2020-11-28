@@ -25,17 +25,19 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
+                                        <th class="text-center">No</th>
                                         <th class="text-center">Kode</th>
                                         <th class="text-center">Kriteria</th>
                                         <th class="text-center">Atribut</th>
                                         <th class="text-center">Bobot</th>
-                                        <th class="text-center" style="width: 20%">Aksi</th>
+                                        <th class="text-center" style="width: 30%">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @if(!empty($kriteria))
                                     @foreach($kriteria as $data)
                                         <tr>
+                                            <td>{{$loop->iteration}}</td>
                                             <td>{{$data->kode}}</td>
                                             <td>{{$data->nama}}</td>
                                             <td>{{$data->atribut}}</td>
