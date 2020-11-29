@@ -53,6 +53,18 @@ Route::prefix('/alternatif')->group(function ()
     Route::post('/hapus/{id}', 'AlternatifController@destroy')->name('alternatif.hapus');
 });
 
+//Route module for franchise
+Route::prefix('/franchise')->group(function ()
+{
+    Route::get('/', 'FranchiseController@index')->name('franchise.index');
+    Route::get('/tambah', 'FranchiseController@create')->name('franchise.tambah');
+    Route::post('/tambah', 'FranchiseController@store')->name('franchise.simpan');
+    Route::get('/edit/{id}', 'FranchiseController@edit')->name('franchise.edit');
+    Route::post('/edit/{id}', 'FranchiseController@update')->name('franchise.update');
+    Route::post('/hapus/{id}', 'FranchiseController@destroy')->name('franchise.hapus');
+    Route::get('/detil/{id}', 'FranchiseController@show')->name('franchise.detil');
+});
+
 //Route module for nilai
 Route::prefix('/nilai')->group(function ()
 {

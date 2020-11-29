@@ -17,9 +17,14 @@
             <p>Home</p>
           </a>
         </li>
-
         @guest
         @else
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('franchise.index')}}">
+            <i class="material-icons">insert_chart</i>
+            <p>Franchise</p>
+          </a>
+        </li>
         @if(Auth()->user()->role == "admin")
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +36,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{route('crip')}}">Nilai Kriteria</a>
         </div>
-    </li>
+      </li>
         @endif
             @if(Auth()->user()->role == "customer")
             <li class="nav-item dropdown">
@@ -55,9 +60,6 @@
         @endguest
 
         
-            
-       
-       
       </ul>
     </div>
 
