@@ -1,6 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+    input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+</style>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -9,6 +21,7 @@
                         <h2 class="float-left">Tambah Franchise</h2>
                         </form>
                     </div>
+
                     <div class="card-body">
                         <div class="row">
                             <form enctype="multipart/form-data" action="{{route('franchise.simpan')}}" method="POST" class="col-md-12">
@@ -63,10 +76,11 @@
                                     <label for="deskripsi">Deskripsi <span class="text-danger">*</span></label>
                                     <textarea name="deskripsi" class="form-control"></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="image">Klik Image di sini</label>
-                                    <input type="file" id="image" name="image" class="form-control">
-                                </div>
+                                    <label for="image" class="custom-file-upload">
+                                    <i class="fa fa-cloud-upload"></i> Upload Logo
+                                    </label>
+                                    <input name="image" id="image" type="file"/>
+                                <br>
                                 {{-- <div class="form-group form-file-upload form-file-multiple">
                                     <input type="file" multiple="" class="inputFileHidden">
                                     <div class="input-group">
